@@ -1,7 +1,7 @@
 import Express from "express";
 import { DB } from './Db/DataBase.js';
-import UserRoute from "../backend/Routes/UserRoutes.js";
-import TaskRoute from "../backend/Routes/TaskRoutes.js";
+import UserRoute from "./Routes/UserRoutes.js";
+import TaskRoute from "./Routes/TaskRoutes.js";
 import dotenv from 'dotenv'
 import cookieParser from "cookie-parser";
 import cors from 'cors'

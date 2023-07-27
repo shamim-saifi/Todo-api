@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "engines": {"node": ">=14.20.1"},
   "scripts": {
@@ -10,7 +10,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "shamim",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
