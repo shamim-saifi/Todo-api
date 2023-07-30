@@ -84,15 +84,15 @@ export const Logout = async (req, res) => {
     try {
         res
             .status(200)
-            .cookie("token", null, {
-                httpOnly: true,
+            .cookie("token", "", {
+               
                 expires: new Date(Date.now()),
                 sameSite:"none",
                 secure:true,
             })
             .json({
                 success: true,
-                message: "Logout Successfully",
+                user: req.user,
 
             })
     } catch (error) {
