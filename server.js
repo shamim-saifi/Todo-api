@@ -24,11 +24,13 @@ app.use(cors({
 app.use('/api/user',UserRoute)  
 app.use('/api/task',TaskRoute) 
 
-app.use(Express.static(path.join(__dirname,'build')))
+app.use(Express.static(path.resolve('/build')))
 
 app.get('*',(req,res)=>{
-    res.sendFile(__dirname,'build/index.html')
+    res.sendFile(path.resolve('/build/index.html'))
 })
+
+
 
 app.listen(process.env.PORT, () => {
     console.log(`running port is ${process.env.PORT}`)
