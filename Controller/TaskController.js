@@ -5,7 +5,7 @@ import { Task } from '../Model/TaskModel.js'
 export const CreateTask = async (req, res) => {
     try {
         const { title, description } = req.body;
-        let task = await Task.create({ title, description, user: req.user })
+      await Task.create({ title, description, user: req.user })
 
         res.status(201).json({
             success: true,

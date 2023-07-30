@@ -6,6 +6,8 @@ import dotenv from 'dotenv'
 import cookieParser from "cookie-parser";
 import cors from 'cors'
 
+import path from "path";
+
 dotenv.config({path:"./config/config.env"})
 
 DB()
@@ -22,7 +24,11 @@ app.use(cors({
 app.use('/api/user',UserRoute)  
 app.use('/api/task',TaskRoute) 
 
+app.use(Express.static(path.join(__dirname,'build')))
 
+app.get('*',(req,res)=>{
+    res.sendFile(__dirname,'build/index.html')
+})
 
 app.listen(process.env.PORT, () => {
     console.log(`running port is ${process.env.PORT}`)

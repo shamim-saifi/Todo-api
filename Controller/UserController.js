@@ -21,7 +21,7 @@ export const Signup = async (req, res) => {
             .status(201)
             .cookie("token", token, {
                 httpOnly: true,
-                maxAge: 20 * 60 * 1000
+                maxAge: 50 * 60 * 1000
             })
             .json({
                 success: true,
@@ -60,7 +60,7 @@ export const Login = async (req, res) => {
             .status(200)
             .cookie("token", token, {
                 httpOnly: true,
-                maxAge: 20 * 60 * 1000
+                maxAge: 50 * 60 * 1000
             })
             .json({
                 success: true,
