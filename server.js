@@ -19,8 +19,8 @@ app.use(cors({
     }))
 
 
-app.use('/user/api',UserRoute) 
-app.use('/task/api',TaskRoute) 
+app.use('/api/user',UserRoute)  
+app.use('/api/task',TaskRoute) 
 
 
 
